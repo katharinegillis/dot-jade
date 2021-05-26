@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-/usr/local/bin/jade/bin/jade docker-compose run --rm app php -dmemory_limit=1G vendor/bin/phpunit "$@"
+TERMINAL_OPTIONS=""
+
+if [ -t 0 ]
+then
+  TERMINAL_OPTIONS="-T"
+fi
+
+/usr/local/bin/jade/bin/jade docker-compose run --rm "$TERMINAL_OPTIONS" app php -dmemory_limit=1G vendor/bin/phpunit "$@"
