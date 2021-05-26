@@ -1,5 +1,5 @@
 # katharinegillis/jade
-Just a bunch of dotfiles.
+Installs the Field Safe Central JADE tool.
 
 ## Install
 Clone and symlink or install with [ellipsis][ellipsis]:
